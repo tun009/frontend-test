@@ -5,7 +5,7 @@ import { nextTick } from 'vue';
 
 // Mock useNumberInput composable
 vi.mock('../../composables/useNumberInput', () => ({
-  useNumberInput: vi.fn().mockImplementation((props, emit) => {
+  useNumberInput: vi.fn().mockImplementation((_, emit) => {
     return {
       inputValue: {
         value: '0'

@@ -1,6 +1,5 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import { useNumberInput } from '../../composables/useNumberInput';
-import { ref } from 'vue';
 
 // Mock các constants cần thiết
 vi.mock('../../constants/constants', () => ({
@@ -107,7 +106,6 @@ describe('useNumberInput', () => {
     it('should update to 100 when switching from px to % with value > 100', () => {
       numberInput = useNumberInput({ modelValue: 200, unit: 'px' }, mockEmit);
       
-      const oldUnit = 'px';
       const newUnit = '%';
       
       vi.spyOn(numberInput, 'inputValue', 'set');
